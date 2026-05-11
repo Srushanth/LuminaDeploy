@@ -99,7 +99,10 @@ function DeploymentCard({ deployment }: { deployment: Deployment }) {
       let step = 0;
       const interval = setInterval(() => {
         if (step < STARTUP_LOGS.length) {
-          setLogs(prev => [...prev, STARTUP_LOGS[step]]);
+          const currentLog = STARTUP_LOGS[step];
+          if (currentLog) {
+            setLogs(prev => [...prev, currentLog]);
+          }
           step++;
         } else {
           clearInterval(interval);
@@ -366,6 +369,7 @@ function DeploymentCard({ deployment }: { deployment: Deployment }) {
                 <span className="text-zinc-600 absolute top-4 left-4">Waiting for logs...</span>
               ) : (
                 logs.map((log, i) => {
+                  if (!log) return null;
                   let colorClass = "text-zinc-300";
                   if (log.includes("[ERROR]")) colorClass = "text-purple-400 font-semibold drop-shadow-[0_0_8px_rgba(192,132,252,0.4)]";
                   if (log.includes("[WARN]")) colorClass = "text-yellow-400";
