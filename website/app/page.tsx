@@ -55,8 +55,12 @@ export default function Home() {
             <Link href="#" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">
               Docs
             </Link>
-            <Button variant="outline" className="hidden sm:inline-flex border-white/20 hover:bg-white/10 text-white">Sign In</Button>
-            <Button className="bg-cyan-500 text-black hover:bg-cyan-400">Get Started</Button>
+            <Link href="/dashboard/wallet">
+              <Button variant="outline" className="hidden sm:inline-flex border-white/20 hover:bg-white/10 text-white">Sign In</Button>
+            </Link>
+            <Link href="/dashboard/wallet">
+              <Button className="bg-cyan-500 text-black hover:bg-cyan-400">Get Started</Button>
+            </Link>
           </nav>
         </div>
       </header>
@@ -81,9 +85,11 @@ export default function Home() {
               Spin up scalable inference endpoints with a single click.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Button size="lg" className="gap-2 text-md font-semibold px-8 bg-cyan-500 text-black hover:bg-cyan-400">
-                Deploy Now <ArrowRight className="w-4 h-4" />
-              </Button>
+              <Link href="/dashboard/wallet">
+                <Button size="lg" className="gap-2 text-md font-semibold px-8 bg-cyan-500 text-black hover:bg-cyan-400">
+                  Deploy Now <ArrowRight className="w-4 h-4" />
+                </Button>
+              </Link>
               <Button size="lg" variant="outline" className="gap-2 text-md px-8 border-white/20 text-white hover:bg-white/10">
                 View Documentation
               </Button>
@@ -122,9 +128,11 @@ export default function Home() {
                     </div>
                   </CardContent>
                   <CardFooter className="pt-4 border-t border-white/5 mt-auto">
-                    <Button className="w-full gap-2 bg-white/5 text-white hover:bg-cyan-500 hover:text-black transition-colors border border-white/10 group-hover:border-cyan-500/50">
-                      <Play className="w-4 h-4 fill-current" /> Deploy Model
-                    </Button>
+                    <Link href="/dashboard/wallet" className="w-full">
+                      <Button className="w-full gap-2 bg-white/5 text-white hover:bg-cyan-500 hover:text-black transition-colors border border-white/10 group-hover:border-cyan-500/50">
+                        <Play className="w-4 h-4 fill-current" /> Deploy Model
+                      </Button>
+                    </Link>
                   </CardFooter>
                 </Card>
               ))}
