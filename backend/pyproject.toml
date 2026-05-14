@@ -9,3 +9,8 @@ dependencies = [
     "google-cloud-run>=0.16.0",
     "pydantic-settings>=2.14.1",
 ]
+
+[dependency-groups]
+dev = [
+    "jupyterlab>=4.5.7",
+]
