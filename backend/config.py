@@ -3,8 +3,8 @@ from pydantic_settings import SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    gcp_project_id: str = "lumina-deploy-project"
-    gcp_region: str = "us-central1"
+    gcp_project_id: str = "gen-lang-client-0570044087"
+    gcp_region: str = "asia-south1"
 
     # Optional: Image for Cloud Run deployment
     ollama_image: str = "ollama/ollama:latest"
