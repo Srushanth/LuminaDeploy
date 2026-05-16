@@ -1,5 +1,5 @@
 from google.cloud import firestore
-from .config import settings
+from config import settings
 
 
 def get_firestore_client() -> firestore.Client:
